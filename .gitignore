@@ -1,1 +1,3 @@
-#updating it by the time. 
+.venv/
+__pycache__/
+*.pyc
