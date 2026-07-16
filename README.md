@@ -9,8 +9,8 @@ Rike helps developers stay informed by aggregating the most important updates fr
 ## Roadmap
 
 - [x] Project setup
-- [ ] Hacker News integration
-- [ ] Rich terminal UI
+- [X] Hacker News integration
+- [X] Rich terminal UI
 - [ ] GitHub Trending
 - [ ] RSS feeds
 - [ ] Security advisories
