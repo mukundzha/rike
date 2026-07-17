@@ -1,162 +1,114 @@
 # Rike
 
-**Developer intelligence in your terminal.**
+**Rike** is a lightweight terminal-based developer intelligence CLI that helps you stay updated without leaving your terminal.
 
-Rike is a terminal-first tool that helps developers stay informed without opening multiple websites. It aggregates the most important updates from developer-focused sources into a fast, clean command-line experience.
+It aggregates useful information from developer-focused sources into a fast, clean command-line interface.
 
-The goal is simple: provide a concise daily briefing that developers can check in under five minutes.
+> Built with Python and Rich.
 
 ---
 
-## Vision
+## Features
 
-Developers constantly switch between Hacker News, GitHub, security advisories, release blogs, RSS feeds, and AI news. Rike aims to bring all of that into a single terminal interface.
+### Hacker News
 
-Instead of browsing dozens of sources, you should be able to run one command:
+* Browse Top Stories
+* Browse Best Stories
+* Browse New Stories
+* View title, author, score, and URL
+* Open any story directly in your default browser
+
+### GitHub Trending
+
+* View trending repositories
+* Display repository name
+* Show programming language
+* Show star count
+* Open repositories directly from the terminal
+
+### Terminal Experience
+
+* Clean Rich-powered interface
+* Fast and lightweight
+* Simple interactive menus
+* Browser integration
+
+---
+
+## Installation
+
+Clone the repository:
 
 ```bash
-rike
+git clone https://github.com/mukundzha/rike.git
+cd rike
 ```
 
-and immediately see what matters.
+Install dependencies:
+
+```bash
+pip install requests rich
+```
+
+Run:
+
+```bash
+python main.py
+```
 
 ---
 
-## Current Features
+## Preview
 
-* Hacker News integration
-* Rich terminal interface
-* Story title, author, score and URL
-* User-defined story limit
-* Fast and lightweight
+```text
+Rike
+Developer Intelligence CLI
+
+Choose Source
+1. Hacker News
+2. GitHub Trending
+>
+```
 
 ---
 
 ## Roadmap
 
-### v0.1 — Foundation ✅
+### v0.1
 
 * [x] Project setup
 * [x] Hacker News integration
-* [x] Rich terminal UI
-* [x] Display title, author and score
-* [x] Display article URL
-* [x] User-defined story limit
-* [x] Basic request timeout handling
+* [x] Rich terminal interface
+* [x] Browser support
 
----
+### v0.2
 
-### v0.2 — Better Hacker News
+* [x] Multiple Hacker News feeds
+* [x] Top Stories
+* [x] Best Stories
+* [x] New Stories
 
-* [ ] Open articles directly in the browser
-* [ ] Choose between Top, Best and New stories
-* [ ] Better error handling
-* [ ] Loading indicator
-* [ ] Story numbering improvements
-* [ ] Cleaner terminal formatting
+### v0.3
 
----
+* [x] GitHub Trending integration
+* [x] Repository metadata
+* [x] Open repositories in browser
 
-### v0.3 — GitHub Intelligence
+### Upcoming
 
-* [ ] GitHub Trending repositories
-* [ ] Repository description
-* [ ] Programming language
-* [ ] Stars gained
-* [ ] Repository URL
-* [ ] Trending developers
-
----
-
-### v0.4 — RSS Support
-
-* [ ] Custom RSS feeds
-* [ ] Save favourite feeds
-* [ ] Feed categories
-* [ ] Refresh feeds
-* [ ] Read latest articles
-
----
-
-### v0.5 — Security
-
-* [ ] Security advisories
-* [ ] CVE updates
-* [ ] GitHub Security Advisories
-* [ ] Severity indicators
-* [ ] Daily vulnerability digest
-
----
-
-### v0.6 — Releases
-
-* [ ] Programming language releases
-* [ ] Framework releases
-* [ ] Library updates
-* [ ] Package version tracking
-
----
-
-### v0.7 — Configuration
-
+* [ ] RSS feed support
+* [ ] Security advisories (CVE, GitHub Security)
+* [ ] Dev.to integration
+* [ ] Reddit programming communities
+* [ ] Product Hunt developer tools
+* [ ] Bookmark stories
+* [ ] Search across sources
+* [ ] Keyboard shortcuts
 * [ ] Configuration file
-* [ ] Default story limit
-* [ ] Preferred news sources
-* [ ] Theme customization
-* [ ] User preferences
-
----
-
-### v0.8 — Performance
-
-* [ ] Local caching
-* [ ] Faster startup
-* [ ] Reduced API requests
-* [ ] Offline cache
-* [ ] Background refresh
-
----
-
-### v0.9 — Search & Filtering
-
-* [ ] Search stories
-* [ ] Filter by source
-* [ ] Filter by language
-* [ ] Filter by popularity
-* [ ] Keyword search
-
----
-
-### v1.0 — Daily Developer Briefing
-
-* [ ] Unified dashboard
-* [ ] Hacker News
-* [ ] GitHub Trending
-* [ ] RSS feeds
-* [ ] Security updates
-* [ ] Release notes
-* [ ] Daily summary
-* [ ] Stable public release
-
----
-
-### Future Ideas
-
-* AI-powered summaries
-* Personalized recommendations
-* Weekly developer digest
-* Plugin system
-* VS Code integration
-* Shell aliases
-* Export to Markdown
-* Export to JSON
-* Notifications
-* Team dashboards
-* Multi-language support
-* Bookmarks
-* Read later
-* Keyboard shortcuts
-* Interactive TUI mode
+* [ ] Multiple themes
+* [ ] AI-powered summaries
+* [ ] Daily digest mode
+* [ ] Plugin architecture
 
 ---
 
@@ -165,16 +117,33 @@ and immediately see what matters.
 * Python
 * Requests
 * Rich
-* Hacker News API
 
 ---
 
-## Installation
+## Why Rike?
 
-Coming soon.
+Developers often switch between Hacker News, GitHub, blogs, and other websites throughout the day.
+
+Rike aims to bring those sources together into a single terminal-first experience that is fast, distraction-free, and extensible.
+
+---
+
+## Project Status
+
+Rike is under active development.
+
+New sources and improvements are being added incrementally while keeping the CLI lightweight and easy to use.
+
+---
+
+## Contributing
+
+Issues, feature requests, and pull requests are welcome.
+
+If you have an idea that would make Rike more useful for developers, feel free to open an issue or submit a contribution.
 
 ---
 
 ## License
 
-MIT
+MIT License.
