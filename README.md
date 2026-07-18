@@ -24,6 +24,7 @@ pip install rike
 Run:
 
 rike
+```bash
 Features
 Hacker News
 
