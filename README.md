@@ -20,9 +20,9 @@ Install Rike from PyPI:
 
 -------------------
 pip install rike
-
-
 rike
+
+
 -----------
 
 Features
