@@ -18,12 +18,10 @@ Currently supported:
 
 Install Rike from PyPI:
 
--------------------
+
 pip install rike
 rike
 
-
------------
 
 Features
 Hacker News
