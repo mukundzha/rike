@@ -18,13 +18,14 @@ Currently supported:
 
 Install Rike from PyPI:
 
-
+```bash
 pip install rike
 rike
+```
 
 
-Features
-Hacker News
+# Features
+# Hacker News
 
 Browse Hacker News directly from your terminal.
 
@@ -63,7 +64,7 @@ URL
 
 You can open any story directly from the terminal.
 
-GitHub Trending
+# GitHub Trending
 
 Explore trending repositories from GitHub.
 
