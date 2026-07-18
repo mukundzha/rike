@@ -2,3 +2,7 @@
 __pycache__/
 *.pyc
 .venv-1/
+dist/
+*.egg-info/
+__pycache__/
+.venv/

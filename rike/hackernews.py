@@ -1,21 +1,8 @@
 import requests
 import webbrowser
-from rich.console import Console
 
-console = Console()
 
-console.print("[bold cyan]Rike[/bold cyan]")
-console.print("[dim]Developer Intelligence CLI[/dim]\n")
-
-source = input(
-    "Choose Source\n"
-    "1. Hacker News\n"
-    "2. GitHub Trending\n"
-    "> "
-)
-
-if source == "1":
-
+def hackernews(console):
     feed = input(
         "\nChoose Feed\n"
         "1. Top Stories\n"
@@ -38,9 +25,10 @@ if source == "1":
 
     if not 1 <= limit <= 30:
         console.print("[bold red]Enter a valid number between 1 and 30.[/bold red]")
-        exit()
+        return
 
-    story_ids = requests.get(feed_url, timeout=10).json()
+    with console.status("[bold cyan]Fetching Hacker News..."):
+        story_ids = requests.get(feed_url, timeout=10).json()
 
     stories = []
 
@@ -63,36 +51,5 @@ if source == "1":
 
     choice = int(input("\nOpen story (0 to skip): "))
 
-    if choice != 0:
+    if 1 <= choice <= len(stories):
         webbrowser.open(stories[choice - 1]["url"])
-
-elif source == "2":
-
-    repos = requests.get(
-        "https://gitrends-api.vercel.app/trending",
-        timeout=10,
-    ).json()
-
-    limit = int(input("\nNumber of repositories (1-30): "))
-
-    if not 1 <= limit <= 30:
-        console.print("[bold red]Enter a valid number between 1 and 30.[/bold red]")
-        exit()
-
-    console.print(f"\n[bold green]Top {limit} Trending GitHub Repositories[/bold green]\n")
-
-    for number, repo in enumerate(repos[:limit], start=1):
-        console.print(f"[bold]{number}. {repo['name']}[/bold]")
-        console.print(
-            f"[dim]{repo['language']} • ⭐ {repo['stars']}[/dim]"
-        )
-        console.print(f"[blue]{repo['url']}[/blue]")
-        console.print("-" * 70)
-
-    choice = int(input("\nOpen repository (0 to skip): "))
-
-    if choice != 0:
-        webbrowser.open(repos[choice - 1]["url"])
-
-else:
-    console.print("[bold red]Invalid option.[/bold red]")
